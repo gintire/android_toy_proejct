@@ -1,12 +1,13 @@
-package com.example.myapplication;
+package com.example.myapplication.lockscreen.service;
 
 import android.app.Service;
-import android.content.BroadcastReceiver;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
 
 import androidx.annotation.Nullable;
+
+import com.example.myapplication.receiver.OnLock_BroadcastReceiver;
 
 public class OnLock_Service extends Service {
     private OnLock_BroadcastReceiver mReceiver;

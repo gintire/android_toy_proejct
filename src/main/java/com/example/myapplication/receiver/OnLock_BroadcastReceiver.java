@@ -1,10 +1,12 @@
-package com.example.myapplication;
+package com.example.myapplication.receiver;
 
 import android.app.KeyguardManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+
+import com.example.myapplication.lockscreen.LockScreenActivity;
 
 public class OnLock_BroadcastReceiver extends BroadcastReceiver {
     private KeyguardManager km = null;
