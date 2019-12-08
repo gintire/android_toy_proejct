@@ -8,7 +8,6 @@ import android.os.IBinder;
 import androidx.annotation.Nullable;
 
 import com.example.myapplication.receiver.OnLock_BroadcastReceiver;
-
 public class OnLock_Service extends Service {
     private OnLock_BroadcastReceiver mReceiver;
     @Override
