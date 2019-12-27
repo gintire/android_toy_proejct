@@ -23,8 +23,6 @@ public class OnLock_BroadcastReceiver extends BroadcastReceiver {
             } catch(PendingIntent.CanceledException e) {
                 e.printStackTrace();
             }*/
-        } else if(intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
-            Log.e("onReceive","SCREEN_OFF");
             if (km == null) {
                 km = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
             }
@@ -37,6 +35,20 @@ public class OnLock_BroadcastReceiver extends BroadcastReceiver {
             i.setClass(context, LockScreenActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(i);
+        } else if(intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
+            Log.e("onReceive","SCREEN_OFF");
+            /*if (km == null) {
+                km = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
+            }
+            if (keyLock == null) {
+                keyLock = km.newKeyguardLock(Context.KEYGUARD_SERVICE);
+            }
+            disableKeyguard();
+
+            Intent i = new Intent(context, LockScreenActivity.class);
+            i.setClass(context, LockScreenActivity.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(i);*/
         } else if(intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
             Log.e("onReceive","SCREEN_BOOT_COMPLETED");
         }

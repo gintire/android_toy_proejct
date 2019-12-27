@@ -20,7 +20,7 @@ class WebViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // Webview
-        webView = findViewById<View>(R.id.web_view) as WebView
+        //webView = findViewById<View>(R.id.web_view) as WebView
         webView!!.webViewClient = WebViewClient()
 
         webSettings = webView!!.settings

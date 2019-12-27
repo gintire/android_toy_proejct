@@ -19,3 +19,8 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+##---------------Begin: proguard configuration for Igaworks Adpopcorn   ----------
+-keep class com.igaworks.adpopcorn.** { *; }
+-dontwarn com.igaworks.adpopcorn.**
+##---------------End: proguard configuration for Igaworks Adpopcorn   ----------
